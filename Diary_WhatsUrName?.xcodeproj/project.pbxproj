@@ -7,15 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B4BE1F61E765AA000E7F988 /* DWDiaryContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BE1F51E765AA000E7F988 /* DWDiaryContentView.m */; };
+		9B4BE1F91E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BE1F81E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m */; };
+		9B4BE1FC1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BE1FB1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m */; };
+		9B4C2A3D1E75168400F556A5 /* DWDiaryTypingCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C2A3C1E75168400F556A5 /* DWDiaryTypingCalendarView.m */; };
+		9B4C2A401E753C2D00F556A5 /* DWDiaryTypingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C2A3F1E753C2D00F556A5 /* DWDiaryTypingView.m */; };
+		9B4C2A431E75430300F556A5 /* DWDiaryLineImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C2A421E75430300F556A5 /* DWDiaryLineImageView.m */; };
+		9B4C2A461E75649600F556A5 /* DWDiaryDismissKeyboardButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4C2A451E75649600F556A5 /* DWDiaryDismissKeyboardButton.m */; };
+		9B4C2A481E75796F00F556A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B4C2A471E75796F00F556A5 /* Assets.xcassets */; };
+		9B870B911E7D20BE0040C10C /* DWDiaryAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B870B901E7D20BE0040C10C /* DWDiaryAlertView.m */; };
+		9B870B941E7D2CFD0040C10C /* DWDiaryTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B870B931E7D2CFD0040C10C /* DWDiaryTipsView.m */; };
+		9B870B961E7D46D80040C10C /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9B870B951E7D46D80040C10C /* icon.jpg */; };
+		9B8EF06B1E73C9D100841B98 /* DWDiaryCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EF06A1E73C9D100841B98 /* DWDiaryCalendarView.m */; };
+		9B8EF06E1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8EF06D1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m */; };
 		9BCB95A21E665A6F0011828E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95A11E665A6F0011828E /* main.m */; };
 		9BCB95A51E665A6F0011828E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95A41E665A6F0011828E /* AppDelegate.m */; };
 		9BCB95A81E665A6F0011828E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95A71E665A6F0011828E /* ViewController.m */; };
 		9BCB95AB1E665A6F0011828E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCB95A91E665A6F0011828E /* Main.storyboard */; };
-		9BCB95AE1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95AC1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodeld */; };
-		9BCB95B01E665A6F0011828E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BCB95AF1E665A6F0011828E /* Assets.xcassets */; };
 		9BCB95B31E665A6F0011828E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BCB95B11E665A6F0011828E /* LaunchScreen.storyboard */; };
 		9BCB95BE1E665A6F0011828E /* Diary_WhatsUrName_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95BD1E665A6F0011828E /* Diary_WhatsUrName_Tests.m */; };
 		9BCB95C91E665A6F0011828E /* Diary_WhatsUrName_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95C81E665A6F0011828E /* Diary_WhatsUrName_UITests.m */; };
+		9BCB95D81E665B4E0011828E /* DWDiaryCellContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95D71E665B4E0011828E /* DWDiaryCellContentView.m */; };
+		9BCB95DB1E6663710011828E /* DWDiaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95DA1E6663710011828E /* DWDiaryTableViewCell.m */; };
+		9BFB83FA1E7A4481005C8E64 /* Diary_WhatsUrName_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BCB95AC1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +50,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B4BE1F41E765AA000E7F988 /* DWDiaryContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryContentView.h; sourceTree = "<group>"; };
+		9B4BE1F51E765AA000E7F988 /* DWDiaryContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryContentView.m; sourceTree = "<group>"; };
+		9B4BE1F71E769F1A00E7F988 /* DWDiaryEmotionSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryEmotionSelectorView.h; sourceTree = "<group>"; };
+		9B4BE1F81E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryEmotionSelectorView.m; sourceTree = "<group>"; };
+		9B4BE1FA1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryWeatherSelectorView.h; sourceTree = "<group>"; };
+		9B4BE1FB1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryWeatherSelectorView.m; sourceTree = "<group>"; };
+		9B4C2A3B1E75168400F556A5 /* DWDiaryTypingCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryTypingCalendarView.h; sourceTree = "<group>"; };
+		9B4C2A3C1E75168400F556A5 /* DWDiaryTypingCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryTypingCalendarView.m; sourceTree = "<group>"; };
+		9B4C2A3E1E753C2D00F556A5 /* DWDiaryTypingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryTypingView.h; sourceTree = "<group>"; };
+		9B4C2A3F1E753C2D00F556A5 /* DWDiaryTypingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryTypingView.m; sourceTree = "<group>"; };
+		9B4C2A411E75430300F556A5 /* DWDiaryLineImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryLineImageView.h; sourceTree = "<group>"; };
+		9B4C2A421E75430300F556A5 /* DWDiaryLineImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryLineImageView.m; sourceTree = "<group>"; };
+		9B4C2A441E75649600F556A5 /* DWDiaryDismissKeyboardButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryDismissKeyboardButton.h; sourceTree = "<group>"; };
+		9B4C2A451E75649600F556A5 /* DWDiaryDismissKeyboardButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryDismissKeyboardButton.m; sourceTree = "<group>"; };
+		9B4C2A471E75796F00F556A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9B870B8F1E7D20BE0040C10C /* DWDiaryAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryAlertView.h; sourceTree = "<group>"; };
+		9B870B901E7D20BE0040C10C /* DWDiaryAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryAlertView.m; sourceTree = "<group>"; };
+		9B870B921E7D2CFD0040C10C /* DWDiaryTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryTipsView.h; sourceTree = "<group>"; };
+		9B870B931E7D2CFD0040C10C /* DWDiaryTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryTipsView.m; sourceTree = "<group>"; };
+		9B870B951E7D46D80040C10C /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
+		9B8EF0691E73C9D100841B98 /* DWDiaryCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryCalendarView.h; sourceTree = "<group>"; };
+		9B8EF06A1E73C9D100841B98 /* DWDiaryCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryCalendarView.m; sourceTree = "<group>"; };
+		9B8EF06C1E73DF5E00841B98 /* DWDiaryCalendarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryCalendarScrollView.h; sourceTree = "<group>"; };
+		9B8EF06D1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryCalendarScrollView.m; sourceTree = "<group>"; };
+		9B8EF06F1E73E4F600841B98 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9BCB959D1E665A6F0011828E /* Diary_WhatsUrName?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diary_WhatsUrName?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCB95A11E665A6F0011828E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9BCB95A31E665A6F0011828E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,7 +83,6 @@
 		9BCB95A71E665A6F0011828E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9BCB95AA1E665A6F0011828E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BCB95AD1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diary_WhatsUrName_.xcdatamodel; sourceTree = "<group>"; };
-		9BCB95AF1E665A6F0011828E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BCB95B21E665A6F0011828E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BCB95B41E665A6F0011828E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BCB95B91E665A6F0011828E /* Diary_WhatsUrName?Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Diary_WhatsUrName?Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +91,10 @@
 		9BCB95C41E665A6F0011828E /* Diary_WhatsUrName?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Diary_WhatsUrName?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BCB95C81E665A6F0011828E /* Diary_WhatsUrName_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Diary_WhatsUrName_UITests.m; sourceTree = "<group>"; };
 		9BCB95CA1E665A6F0011828E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BCB95D61E665B4E0011828E /* DWDiaryCellContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryCellContentView.h; sourceTree = "<group>"; };
+		9BCB95D71E665B4E0011828E /* DWDiaryCellContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryCellContentView.m; sourceTree = "<group>"; };
+		9BCB95D91E6663710011828E /* DWDiaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryTableViewCell.h; sourceTree = "<group>"; };
+		9BCB95DA1E6663710011828E /* DWDiaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,16 +145,44 @@
 		9BCB959F1E665A6F0011828E /* Diary_WhatsUrName? */ = {
 			isa = PBXGroup;
 			children = (
+				9B4C2A471E75796F00F556A5 /* Assets.xcassets */,
+				9B870B951E7D46D80040C10C /* icon.jpg */,
+				9B8EF06F1E73E4F600841B98 /* Constants.h */,
 				9BCB95A31E665A6F0011828E /* AppDelegate.h */,
 				9BCB95A41E665A6F0011828E /* AppDelegate.m */,
 				9BCB95A61E665A6F0011828E /* ViewController.h */,
 				9BCB95A71E665A6F0011828E /* ViewController.m */,
 				9BCB95A91E665A6F0011828E /* Main.storyboard */,
-				9BCB95AF1E665A6F0011828E /* Assets.xcassets */,
 				9BCB95B11E665A6F0011828E /* LaunchScreen.storyboard */,
 				9BCB95B41E665A6F0011828E /* Info.plist */,
 				9BCB95AC1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodeld */,
 				9BCB95A01E665A6F0011828E /* Supporting Files */,
+				9BCB95D61E665B4E0011828E /* DWDiaryCellContentView.h */,
+				9BCB95D71E665B4E0011828E /* DWDiaryCellContentView.m */,
+				9BCB95D91E6663710011828E /* DWDiaryTableViewCell.h */,
+				9BCB95DA1E6663710011828E /* DWDiaryTableViewCell.m */,
+				9B8EF0691E73C9D100841B98 /* DWDiaryCalendarView.h */,
+				9B8EF06A1E73C9D100841B98 /* DWDiaryCalendarView.m */,
+				9B8EF06C1E73DF5E00841B98 /* DWDiaryCalendarScrollView.h */,
+				9B8EF06D1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m */,
+				9B4C2A3B1E75168400F556A5 /* DWDiaryTypingCalendarView.h */,
+				9B4C2A3C1E75168400F556A5 /* DWDiaryTypingCalendarView.m */,
+				9B4C2A3E1E753C2D00F556A5 /* DWDiaryTypingView.h */,
+				9B4C2A3F1E753C2D00F556A5 /* DWDiaryTypingView.m */,
+				9B4BE1F71E769F1A00E7F988 /* DWDiaryEmotionSelectorView.h */,
+				9B4BE1F81E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m */,
+				9B4BE1FA1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.h */,
+				9B4BE1FB1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m */,
+				9B4C2A411E75430300F556A5 /* DWDiaryLineImageView.h */,
+				9B4C2A421E75430300F556A5 /* DWDiaryLineImageView.m */,
+				9B4C2A441E75649600F556A5 /* DWDiaryDismissKeyboardButton.h */,
+				9B4C2A451E75649600F556A5 /* DWDiaryDismissKeyboardButton.m */,
+				9B4BE1F41E765AA000E7F988 /* DWDiaryContentView.h */,
+				9B4BE1F51E765AA000E7F988 /* DWDiaryContentView.m */,
+				9B870B8F1E7D20BE0040C10C /* DWDiaryAlertView.h */,
+				9B870B901E7D20BE0040C10C /* DWDiaryAlertView.m */,
+				9B870B921E7D2CFD0040C10C /* DWDiaryTipsView.h */,
+				9B870B931E7D2CFD0040C10C /* DWDiaryTipsView.m */,
 			);
 			path = "Diary_WhatsUrName?";
 			sourceTree = "<group>";
@@ -252,8 +322,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B870B961E7D46D80040C10C /* icon.jpg in Resources */,
 				9BCB95B31E665A6F0011828E /* LaunchScreen.storyboard in Resources */,
-				9BCB95B01E665A6F0011828E /* Assets.xcassets in Resources */,
+				9B4C2A481E75796F00F556A5 /* Assets.xcassets in Resources */,
 				9BCB95AB1E665A6F0011828E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,10 +350,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFB83FA1E7A4481005C8E64 /* Diary_WhatsUrName_.xcdatamodeld in Sources */,
+				9B4BE1FC1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m in Sources */,
+				9B4BE1F91E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m in Sources */,
 				9BCB95A81E665A6F0011828E /* ViewController.m in Sources */,
-				9BCB95AE1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodeld in Sources */,
+				9B870B911E7D20BE0040C10C /* DWDiaryAlertView.m in Sources */,
+				9BCB95D81E665B4E0011828E /* DWDiaryCellContentView.m in Sources */,
+				9B4C2A431E75430300F556A5 /* DWDiaryLineImageView.m in Sources */,
 				9BCB95A51E665A6F0011828E /* AppDelegate.m in Sources */,
+				9BCB95DB1E6663710011828E /* DWDiaryTableViewCell.m in Sources */,
+				9B4BE1F61E765AA000E7F988 /* DWDiaryContentView.m in Sources */,
+				9B870B941E7D2CFD0040C10C /* DWDiaryTipsView.m in Sources */,
+				9B8EF06B1E73C9D100841B98 /* DWDiaryCalendarView.m in Sources */,
+				9B8EF06E1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m in Sources */,
 				9BCB95A21E665A6F0011828E /* main.m in Sources */,
+				9B4C2A401E753C2D00F556A5 /* DWDiaryTypingView.m in Sources */,
+				9B4C2A461E75649600F556A5 /* DWDiaryDismissKeyboardButton.m in Sources */,
+				9B4C2A3D1E75168400F556A5 /* DWDiaryTypingCalendarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +602,7 @@
 				9BCB95CF1E665A6F0011828E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BCB95D01E665A6F0011828E /* Build configuration list for PBXNativeTarget "Diary_WhatsUrName?Tests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +611,7 @@
 				9BCB95D21E665A6F0011828E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BCB95D31E665A6F0011828E /* Build configuration list for PBXNativeTarget "Diary_WhatsUrName?UITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +620,7 @@
 				9BCB95D51E665A6F0011828E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
