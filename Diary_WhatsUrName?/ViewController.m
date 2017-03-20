@@ -132,7 +132,7 @@ typedef enum : NSUInteger {
     _pickerView.dicDate = self.arrayTodayDics[2];
     _pickerView.delegate = self;
     
-    _typingView = [[DWDiaryTypingView alloc] initWithFrame:CGRectMake(0, DWDiaryNavigationBarHeight + DWDiaryTypingCalendarHeight, DWScreenWidth, 413)];
+    _typingView = [[DWDiaryTypingView alloc] initWithFrame:CGRectMake(0, DWDiaryNavigationBarHeight + DWDiaryTypingCalendarHeight, DWScreenWidth, DWScreenHeight - CGRectGetMaxY(_pickerView.frame))];
     _typingView.delegate = self;
     
     _disKeyboardButton = [[DWDiaryDismissKeyboardButton alloc] init];
@@ -601,6 +601,9 @@ typedef enum : NSUInteger {
     });
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         [self updateTableViewDataSourceFromDataBase];
+        if (_controllerMode == CONTROLLER_MODE_CALENDAR) {
+            [self updateArrayModelDayWithDicDate:_scrollView.arrayDayDics[_scrollView.currentIndex]];
+        }
     });
 }
 
