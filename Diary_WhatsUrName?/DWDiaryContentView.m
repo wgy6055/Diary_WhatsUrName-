@@ -65,7 +65,7 @@
         [self.labelYearMonth sizeToFit];
         rect = self.labelYearMonth.frame;
         rect.origin.x = self.dateView.frame.size.width / 2 - rect.size.width / 2;
-        rect.origin.y = 20;
+        rect.origin.y = DWDateLabelY;
         self.labelYearMonth.frame = rect;
         
         self.labelDay.text = dicDate[@"day"];

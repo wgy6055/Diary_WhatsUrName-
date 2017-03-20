@@ -104,7 +104,7 @@ typedef enum : NSUInteger {
     _navigationBar.backgroundColor = [UIColor whiteColor];
     _segment = [[UISegmentedControl alloc] initWithItems:@[@"浏览", @"日历", @"撰写"]];
     _segment.tintColor = DWDiaryThemeBlueColor;
-    _segment.frame = CGRectMake(50, 40, rect.size.width - 100, 25);
+    _segment.frame = CGRectMake(50, DWDiarySegmentY, rect.size.width - 100, 25);
     [_segment addTarget:self action:@selector(didChangeValueOfSegmentControl:) forControlEvents:UIControlEventValueChanged];
     _segment.selectedSegmentIndex = 0;
     [_navigationBar addSubview:_segment];
@@ -211,7 +211,7 @@ typedef enum : NSUInteger {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    _contentView = [[DWDiaryContentView alloc] initWithFrame:CGRectMake(10, 25, 375 - 20, 667 - 40)];
+    _contentView = [[DWDiaryContentView alloc] initWithFrame:CGRectMake(10, 25, DWDiaryContentViewWidth, DWDiaryContentViewHeight)];
     _contentView.delegate = self;
     DWDiaryTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     _contentView.dicDate = cell.dicDate;
@@ -389,9 +389,9 @@ typedef enum : NSUInteger {
     [UIView setAnimationDuration:duration];
     [UIView setAnimationDelay:0];
     //设置view的frame，往上平移
-    [_typingView setFrame:CGRectMake(0, DWScreenHeight - keyboardRect.size.height - 355, DWScreenWidth, 413)];
-    [_pickerView setFrame:CGRectMake(0, 0, DWScreenWidth, DWScreenHeight - _typingView.frame.origin.y)];
+    [_pickerView setFrame:CGRectMake(0, 0, DWScreenWidth, DWDiaryTypingCalenderSmallHeight)];
     [_pickerView transformToSmallMood];
+    [_typingView setFrame:CGRectMake(0, CGRectGetMaxY(_pickerView.frame), DWScreenWidth, DWDiaryTypingViewHeight)];
     [_navigationBar setFrame:CGRectMake(0, -DWDiaryNavigationBarHeight, DWScreenWidth, DWDiaryNavigationBarHeight)];
     //提交动画
     [UIView commitAnimations];
@@ -408,7 +408,7 @@ typedef enum : NSUInteger {
     [UIView setAnimationDuration:duration];
     [UIView setAnimationDelay:0];
     //设置view的frame，往上平移
-    [_typingView setFrame:CGRectMake(0, DWDiaryNavigationBarHeight + DWDiaryTypingCalendarHeight, DWScreenWidth, 413)];
+    [_typingView setFrame:CGRectMake(0, DWDiaryNavigationBarHeight + DWDiaryTypingCalendarHeight, DWScreenWidth, DWDiaryTypingViewHeight)];
     [_pickerView setFrame:CGRectMake(0, DWDiaryNavigationBarHeight, DWScreenWidth, DWDiaryTypingCalendarHeight)];
     [_pickerView transformToNormalMood];
     [_navigationBar setFrame:CGRectMake(0, 0, DWScreenWidth, DWDiaryNavigationBarHeight)];

@@ -37,7 +37,7 @@
         self.backgroundColor = [UIColor whiteColor];
         
         [self addSubview:self.tFTitle];
-        [self addSubview:[[DWDiaryLineImageView alloc] initWithFrame:CGRectMake(0, 35, DWScreenWidth, 10) lineWidth:0.2]];
+        [self addSubview:[[DWDiaryLineImageView alloc] initWithFrame:CGRectMake(0, DWDiaryTypingTextFieldHeight + 5, DWScreenWidth, 10) lineWidth:0.2]];
         [self addSubview:self.tVDetail];
         
         [self addSubview:self.toolBar];
@@ -78,7 +78,7 @@
 
 - (UITextField *)tFTitle {
     if (!_tFTitle) {
-        _tFTitle = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, DWScreenWidth - 10, 30)];
+        _tFTitle = [[UITextField alloc] initWithFrame:CGRectMake(5, 5, DWScreenWidth - 10, DWDiaryTypingTextFieldHeight)];
         _tFTitle.placeholder = @"标题";
         [_tFTitle setBorderStyle:UITextBorderStyleNone];
     }
@@ -87,7 +87,7 @@
 
 - (UITextView *)tVDetail {
     if (!_tVDetail) {
-        _tVDetail = [[UITextView alloc] initWithFrame:CGRectMake(5, 45, DWScreenWidth - 10, self.frame.size.height - 45 - 5 - 55)];
+        _tVDetail = [[UITextView alloc] initWithFrame:CGRectMake(5, DWDiaryTypingTextFieldHeight + 15, DWScreenWidth - 10, DWDiaryTypingTextViewHeight)];
         _tVDetail.font = [UIFont systemFontOfSize:15];
     }
     return _tVDetail;
@@ -95,7 +95,7 @@
 
 - (UIView *)toolBar {
     if (!_toolBar) {
-        _toolBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - 55, DWScreenWidth, 55)];
+        _toolBar = [[UIView alloc] initWithFrame:CGRectMake(0, self.frame.size.height - DWDiaryTypingToolBarHeight, DWScreenWidth, DWDiaryTypingToolBarHeight)];
         _toolBar.backgroundColor = DWDiaryThemeBlueColor;
         
         _buttonEmotion = [UIButton buttonWithType:UIButtonTypeCustom];
