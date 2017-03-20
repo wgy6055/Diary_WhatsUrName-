@@ -123,6 +123,10 @@
     return _tipsView;
 }
 
+- (void)updateFrameWithDalta:(CGFloat)dalta {
+    self.tVDetail.frame = CGRectMake(5, DWDiaryTypingTextFieldHeight + 15, DWScreenWidth - 10, DWDiaryTypingTextViewHeight - dalta);
+}
+
 #pragma mark - handle button tap
 - (void)buttonEmotionTap {
     _emotionSelectorView = [[DWDiaryEmotionSelectorView alloc] initWithFrame:CGRectMake(DWScreenWidth / 2 - 190 / 2, DWScreenHeight / 2 - 60 / 2, 190, 60)];

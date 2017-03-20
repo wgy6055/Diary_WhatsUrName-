@@ -23,4 +23,6 @@
 
 @property (weak, nonatomic) id<DWDiaryTypingDelegate> delegate;
 
+- (void)updateFrameWithDalta:(CGFloat)dalta;
+
 @end

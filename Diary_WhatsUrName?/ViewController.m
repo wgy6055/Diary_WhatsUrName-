@@ -389,9 +389,15 @@ typedef enum : NSUInteger {
     [UIView setAnimationDuration:duration];
     [UIView setAnimationDelay:0];
     //设置view的frame，往上平移
+    [_typingView setFrame:CGRectMake(0, DWScreenHeight - keyboardRect.size.height - DWDiaryTypingViewHeight + DWDiaryTypingToolBarHeight, DWScreenWidth, DWDiaryTypingViewHeight)];
     [_pickerView setFrame:CGRectMake(0, 0, DWScreenWidth, DWDiaryTypingCalenderSmallHeight)];
     [_pickerView transformToSmallMood];
-    [_typingView setFrame:CGRectMake(0, CGRectGetMaxY(_pickerView.frame), DWScreenWidth, DWDiaryTypingViewHeight)];
+    if (_typingView.frame.origin.y < _pickerView.frame.size.height) {
+        CGFloat dalta = _pickerView.frame.size.height - _typingView.frame.origin.y;
+        _typingView.frame = CGRectMake(0, DWDiaryTypingCalenderSmallHeight, DWScreenWidth, DWDiaryTypingViewHeight - dalta);
+        [_typingView updateFrameWithDalta:dalta];
+        
+    }
     [_navigationBar setFrame:CGRectMake(0, -DWDiaryNavigationBarHeight, DWScreenWidth, DWDiaryNavigationBarHeight)];
     //提交动画
     [UIView commitAnimations];
