@@ -43,7 +43,7 @@
 - (UILabel *)labelDay {
     if (!_labelDay) {
         _labelDay = [[UILabel alloc] init];
-        _labelDay.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:23];
+        _labelDay.font = [UIFont fontWithName:@"STHeitiSC-Medium" size:25];
         _labelDay.textColor = DWDiaryThemeBlueColor;
     }
     return _labelDay;
@@ -107,24 +107,24 @@
         CGFloat marginTime = 8.0;
         CGRect rect;
         
-        self.labelDay.text = dicDate[@"day"];
-        [self.labelDay sizeToFit];
-        rect = self.labelDay.frame;
-        rect.origin.x = margin;
-        rect.origin.y = margin - 2;
-        self.labelDay.frame = rect;
-        
         self.labelWeek.text = dicDate[@"week"];
         [self.labelWeek sizeToFit];
         rect = self.labelWeek.frame;
         rect.origin.x = margin;
-        rect.origin.y = CGRectGetMaxY(self.labelDay.frame) + 3;
+        rect.origin.y = self.frame.size.height - rect.size.height - margin;
         self.labelWeek.frame = rect;
+        
+        self.labelDay.text = dicDate[@"day"];
+        [self.labelDay sizeToFit];
+        rect = self.labelDay.frame;
+        rect.origin.x = CGRectGetMidX(self.labelWeek.frame) - rect.size.width / 2;
+        rect.origin.y = margin - 2;
+        self.labelDay.frame = rect;
         
         self.labelTime.text = dicDate[@"time"];
         [self.labelTime sizeToFit];
         rect = self.labelTime.frame;
-        rect.origin.x = CGRectGetMaxX(self.labelDay.frame) + margin;
+        rect.origin.x = CGRectGetMaxX(self.labelWeek.frame) + margin;
         rect.origin.y = marginTime;
         self.labelTime.frame = rect;
     }
