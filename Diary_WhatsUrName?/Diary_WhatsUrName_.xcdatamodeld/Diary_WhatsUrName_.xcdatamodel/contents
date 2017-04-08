@@ -11,7 +11,12 @@
         <attribute name="week" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES" codeGenerationType="class">
+        <attribute name="isLocked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="DiaryModel" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="UserInfo" positionX="-63" positionY="54" width="128" height="75"/>
     </elements>
 </model>

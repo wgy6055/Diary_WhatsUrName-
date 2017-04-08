@@ -14,7 +14,10 @@
 #define DWScreenHeight [UIScreen mainScreen].bounds.size.height
 #define DWDiaryCalendarViewHeight 350
 #define DWDiaryNavigationBarHeight (DWScreenHeight*109/667)
+#define DWSettingNavigationBarHeight (DWScreenHeight*80/667)
 #define DWDiarySegmentY (DWScreenHeight*40/667)
+#define DWDiaryButtonSettingPadding 10
+#define DWDiaryButtonSettingWidth 28
 #define DWDiaryTypingCalendarHeight (DWScreenHeight*145/667)
 #define DWDiaryTypingCalenderSmallHeight (DWScreenHeight*58/667)
 #define DWDiaryTypingTextFieldHeight (DWScreenHeight*30/667)
@@ -37,6 +40,21 @@
 
 #define DWDiaryTipsViewWidth (DWScreenHeight*100/667)
 #define DWDiaryTipsViewHeight (DWScreenWidth*50/375)
+
+#define DWPasswordSpaceMargin (DWScreenWidth*8/375)
+#define DWPasswordSpaceWidth (DWScreenWidth*30/375)
+#define DWPasswordSpaceHeight (DWScreenHeight*30/667)
+#define DWPasswordDisplayViewWidth (DWScreenWidth*144/375)
+#define DWPasswordDisplayViewHeight (DWScreenHeight*40/667)
+#define DWPasswordDisplayViewTopPadding (DWScreenHeight*100/667)
+
+#define DWPasswordNumButtonWidth (DWScreenHeight*80/667)
+#define DWPasswordNumButtonLeftPadding (DWScreenWidth*42.5/375)
+#define DWPasswordNumButtonTopPadding (DWScreenHeight*170/667)
+#define DWPasswordNumButtonMargin (DWScreenWidth*25/375)
+
+#define DWSettingQuitButtonLeftPadding 10
+#define DWSettingQuitButtonWidth 20
 
 // RGB颜色
 #define DWRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]

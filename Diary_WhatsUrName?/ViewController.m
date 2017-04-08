@@ -15,6 +15,9 @@
 #import "DWDiaryContentView.h"
 #import "Constants.h"
 
+//#import "DWPasswordViewController.h"
+#import "DWSettingViewController.h"
+
 #import "AppDelegate.h"
 
 typedef enum : NSUInteger {
@@ -23,7 +26,7 @@ typedef enum : NSUInteger {
     CONTROLLER_MODE_TYPING,
 } DWControllerMode;
 
-@interface ViewController () <UITableViewDelegate, UITableViewDataSource, DWDiaryTypingCalendarDelegate, DWDiaryTypingDelegate, DWDiaryContentViewDelegate>
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource, DWDiaryTypingCalendarDelegate, DWDiaryTypingDelegate, DWDiaryContentViewDelegate, DWSettingViewControllerDelegate>
 
 @property (strong, nonatomic) NSMutableArray *arrayModel;
 @property (strong, nonatomic) NSMutableArray *arrayModelDay;
@@ -31,6 +34,7 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UIView *navigationBar;
 @property (strong, nonatomic) UISegmentedControl *segment;
+@property (strong, nonatomic) UIButton *buttonSetting;
 @property (strong, nonatomic) UILabel *labelTheme;
 @property (strong, nonatomic) DWDiaryCalendarScrollView *scrollView;
 @property (strong, nonatomic) NSMutableArray *arrayTodayDics;
@@ -102,6 +106,7 @@ typedef enum : NSUInteger {
     
     _navigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, DWDiaryNavigationBarHeight)];
     _navigationBar.backgroundColor = [UIColor whiteColor];
+    
     _segment = [[UISegmentedControl alloc] initWithItems:@[@"浏览", @"日历", @"撰写"]];
     _segment.tintColor = DWDiaryThemeBlueColor;
     _segment.frame = CGRectMake(50, DWDiarySegmentY, rect.size.width - 100, 25);
@@ -120,6 +125,11 @@ typedef enum : NSUInteger {
     _labelTheme.frame = labelRect;
     [_navigationBar addSubview:_labelTheme];
     
+    _buttonSetting = [[UIButton alloc] initWithFrame:CGRectMake(DWDiaryButtonSettingPadding, CGRectGetMidY(_segment.frame) - DWDiaryButtonSettingWidth / 2, DWDiaryButtonSettingWidth, DWDiaryButtonSettingWidth)];
+    [_buttonSetting setImage:[UIImage imageNamed:@"setting"] forState:UIControlStateNormal];
+    [_buttonSetting addTarget:self action:@selector(buttonSettingTap) forControlEvents:UIControlEventTouchUpInside];
+    [_navigationBar addSubview:_buttonSetting];
+
     [self.view addSubview:_navigationBar];
     
     _scrollView = [[DWDiaryCalendarScrollView alloc] initWithFrame:CGRectMake(0, DWDiaryNavigationBarHeight, rect.size.width, DWDiaryCalendarViewHeight)];
@@ -450,7 +460,7 @@ typedef enum : NSUInteger {
             }
             return (NSComparisonResult)NSOrderedSame;
         };
-        _arrayModel = [[tmpArray sortedArrayUsingComparator:comparator] mutableCopy];;
+        _arrayModel = [[tmpArray sortedArrayUsingComparator:comparator] mutableCopy];
         
         [_tableView reloadData];
     });
@@ -576,6 +586,16 @@ typedef enum : NSUInteger {
     [_typingView endEditing:YES];
 }
 
+#pragma mark - handle tap gesture
+- (void)buttonSettingTap {
+//    DWPasswordViewController *controller = [[DWPasswordViewController alloc] init];
+//    controller.delegate = self;
+//    [self.navigationController presentViewController:controller animated:YES completion:nil];
+    DWSettingViewController *controller = [[DWSettingViewController alloc] init];
+    controller.delegate = self;
+    [self.navigationController presentViewController:controller animated:YES completion:nil];
+}
+
 #pragma mark - DWDiaryTypingCalendarDelegate
 - (void)leftButtonPressed {
     _pickerView.dicDate = [self getDayDicAfterDays:-1 fromDate:_pickerView.dicDate[@"date"]];
@@ -622,6 +642,11 @@ typedef enum : NSUInteger {
             _contentView.detail = cell.detail;
         }
     }
+}
+
+#pragma mark - DWSettingViewControllerDelegate
+- (void)dismissViewController {
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

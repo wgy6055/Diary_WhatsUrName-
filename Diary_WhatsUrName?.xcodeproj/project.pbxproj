@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B0BF9411E9891B2009C5B90 /* DWSettingStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9401E9891B2009C5B90 /* DWSettingStore.m */; };
+		9B0BF9441E989383009C5B90 /* DWPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9431E989383009C5B90 /* DWPasswordViewController.m */; };
+		9B0BF9481E9893F2009C5B90 /* DWPasswordNumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9471E9893F2009C5B90 /* DWPasswordNumberButton.m */; };
+		9B0BF94B1E98BE38009C5B90 /* DWPasswordDisplayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF94A1E98BE38009C5B90 /* DWPasswordDisplayView.m */; };
+		9B0BF94E1E98CFE5009C5B90 /* DWPasswordChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF94D1E98CFE5009C5B90 /* DWPasswordChecker.m */; };
+		9B0BF9511E98DB45009C5B90 /* DWSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9501E98DB45009C5B90 /* DWSettingViewController.m */; };
+		9B0BF9581E98E687009C5B90 /* DWSettingSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF9571E98E687009C5B90 /* DWSettingSwitchTableViewCell.m */; };
+		9B0BF95B1E990B7B009C5B90 /* DWUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B0BF95A1E990B7B009C5B90 /* DWUserInfo.m */; };
 		9B4BE1F61E765AA000E7F988 /* DWDiaryContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BE1F51E765AA000E7F988 /* DWDiaryContentView.m */; };
 		9B4BE1F91E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BE1F81E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m */; };
 		9B4BE1FC1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B4BE1FB1E76B5C200E7F988 /* DWDiaryWeatherSelectorView.m */; };
@@ -50,6 +58,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B0BF93F1E9891B2009C5B90 /* DWSettingStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSettingStore.h; sourceTree = "<group>"; };
+		9B0BF9401E9891B2009C5B90 /* DWSettingStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSettingStore.m; sourceTree = "<group>"; };
+		9B0BF9421E989383009C5B90 /* DWPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPasswordViewController.h; sourceTree = "<group>"; };
+		9B0BF9431E989383009C5B90 /* DWPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPasswordViewController.m; sourceTree = "<group>"; };
+		9B0BF9461E9893F2009C5B90 /* DWPasswordNumberButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPasswordNumberButton.h; sourceTree = "<group>"; };
+		9B0BF9471E9893F2009C5B90 /* DWPasswordNumberButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPasswordNumberButton.m; sourceTree = "<group>"; };
+		9B0BF9491E98BE38009C5B90 /* DWPasswordDisplayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPasswordDisplayView.h; sourceTree = "<group>"; };
+		9B0BF94A1E98BE38009C5B90 /* DWPasswordDisplayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPasswordDisplayView.m; sourceTree = "<group>"; };
+		9B0BF94C1E98CFE5009C5B90 /* DWPasswordChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWPasswordChecker.h; sourceTree = "<group>"; };
+		9B0BF94D1E98CFE5009C5B90 /* DWPasswordChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWPasswordChecker.m; sourceTree = "<group>"; };
+		9B0BF94F1E98DB45009C5B90 /* DWSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSettingViewController.h; sourceTree = "<group>"; };
+		9B0BF9501E98DB45009C5B90 /* DWSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSettingViewController.m; sourceTree = "<group>"; };
+		9B0BF9561E98E687009C5B90 /* DWSettingSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSettingSwitchTableViewCell.h; sourceTree = "<group>"; };
+		9B0BF9571E98E687009C5B90 /* DWSettingSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSettingSwitchTableViewCell.m; sourceTree = "<group>"; };
+		9B0BF9591E990B7B009C5B90 /* DWUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWUserInfo.h; sourceTree = "<group>"; };
+		9B0BF95A1E990B7B009C5B90 /* DWUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWUserInfo.m; sourceTree = "<group>"; };
 		9B4BE1F41E765AA000E7F988 /* DWDiaryContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryContentView.h; sourceTree = "<group>"; };
 		9B4BE1F51E765AA000E7F988 /* DWDiaryContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWDiaryContentView.m; sourceTree = "<group>"; };
 		9B4BE1F71E769F1A00E7F988 /* DWDiaryEmotionSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWDiaryEmotionSelectorView.h; sourceTree = "<group>"; };
@@ -122,6 +146,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B0BF9451E98938D009C5B90 /* 安全 */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BF9421E989383009C5B90 /* DWPasswordViewController.h */,
+				9B0BF9431E989383009C5B90 /* DWPasswordViewController.m */,
+				9B0BF9461E9893F2009C5B90 /* DWPasswordNumberButton.h */,
+				9B0BF9471E9893F2009C5B90 /* DWPasswordNumberButton.m */,
+				9B0BF9491E98BE38009C5B90 /* DWPasswordDisplayView.h */,
+				9B0BF94A1E98BE38009C5B90 /* DWPasswordDisplayView.m */,
+				9B0BF94C1E98CFE5009C5B90 /* DWPasswordChecker.h */,
+				9B0BF94D1E98CFE5009C5B90 /* DWPasswordChecker.m */,
+			);
+			name = "安全";
+			sourceTree = "<group>";
+		};
+		9B0BF9521E98E323009C5B90 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				9B0BF94F1E98DB45009C5B90 /* DWSettingViewController.h */,
+				9B0BF9501E98DB45009C5B90 /* DWSettingViewController.m */,
+				9B0BF9561E98E687009C5B90 /* DWSettingSwitchTableViewCell.h */,
+				9B0BF9571E98E687009C5B90 /* DWSettingSwitchTableViewCell.m */,
+				9B0BF9591E990B7B009C5B90 /* DWUserInfo.h */,
+				9B0BF95A1E990B7B009C5B90 /* DWUserInfo.m */,
+			);
+			name = "设置";
+			sourceTree = "<group>";
+		};
 		9BCB95941E665A6F0011828E = {
 			isa = PBXGroup;
 			children = (
@@ -152,11 +204,15 @@
 				9BCB95A41E665A6F0011828E /* AppDelegate.m */,
 				9BCB95A61E665A6F0011828E /* ViewController.h */,
 				9BCB95A71E665A6F0011828E /* ViewController.m */,
+				9B0BF93F1E9891B2009C5B90 /* DWSettingStore.h */,
+				9B0BF9401E9891B2009C5B90 /* DWSettingStore.m */,
 				9BCB95A91E665A6F0011828E /* Main.storyboard */,
 				9BCB95B11E665A6F0011828E /* LaunchScreen.storyboard */,
 				9BCB95B41E665A6F0011828E /* Info.plist */,
 				9BCB95AC1E665A6F0011828E /* Diary_WhatsUrName_.xcdatamodeld */,
 				9BCB95A01E665A6F0011828E /* Supporting Files */,
+				9B0BF9521E98E323009C5B90 /* 设置 */,
+				9B0BF9451E98938D009C5B90 /* 安全 */,
 				9BD39D3A1E8939BE0010C832 /* 浏览 */,
 				9BD39D3B1E8939D10010C832 /* 日历 */,
 				9BD39D3C1E8939E60010C832 /* 撰写 */,
@@ -379,18 +435,26 @@
 				9B4BE1F91E769F1A00E7F988 /* DWDiaryEmotionSelectorView.m in Sources */,
 				9BCB95A81E665A6F0011828E /* ViewController.m in Sources */,
 				9B870B911E7D20BE0040C10C /* DWDiaryAlertView.m in Sources */,
+				9B0BF94E1E98CFE5009C5B90 /* DWPasswordChecker.m in Sources */,
 				9BCB95D81E665B4E0011828E /* DWDiaryCellContentView.m in Sources */,
 				9B4C2A431E75430300F556A5 /* DWDiaryLineImageView.m in Sources */,
 				9BCB95A51E665A6F0011828E /* AppDelegate.m in Sources */,
+				9B0BF9511E98DB45009C5B90 /* DWSettingViewController.m in Sources */,
 				9BCB95DB1E6663710011828E /* DWDiaryTableViewCell.m in Sources */,
 				9B4BE1F61E765AA000E7F988 /* DWDiaryContentView.m in Sources */,
 				9B870B941E7D2CFD0040C10C /* DWDiaryTipsView.m in Sources */,
 				9B8EF06B1E73C9D100841B98 /* DWDiaryCalendarView.m in Sources */,
 				9B8EF06E1E73DF5E00841B98 /* DWDiaryCalendarScrollView.m in Sources */,
+				9B0BF9441E989383009C5B90 /* DWPasswordViewController.m in Sources */,
+				9B0BF9481E9893F2009C5B90 /* DWPasswordNumberButton.m in Sources */,
+				9B0BF94B1E98BE38009C5B90 /* DWPasswordDisplayView.m in Sources */,
 				9BCB95A21E665A6F0011828E /* main.m in Sources */,
 				9B4C2A401E753C2D00F556A5 /* DWDiaryTypingView.m in Sources */,
 				9B4C2A461E75649600F556A5 /* DWDiaryDismissKeyboardButton.m in Sources */,
+				9B0BF95B1E990B7B009C5B90 /* DWUserInfo.m in Sources */,
 				9B4C2A3D1E75168400F556A5 /* DWDiaryTypingCalendarView.m in Sources */,
+				9B0BF9411E9891B2009C5B90 /* DWSettingStore.m in Sources */,
+				9B0BF9581E98E687009C5B90 /* DWSettingSwitchTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

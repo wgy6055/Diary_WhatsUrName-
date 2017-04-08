@@ -8,8 +8,10 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "DWSettingStore.h"
+#import "DWPasswordViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <DWPasswordViewControllerDelegate>
 
 @end
 
@@ -17,9 +19,19 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
-    self.window.rootViewController = navigation;
-    navigation.navigationBar.translucent = NO;
+    [self loadUserInfoFromDataBase];
+    
+    if ([DWSettingStore sharedInstance].isLocked) {
+        DWPasswordViewController *passwordController = [[DWPasswordViewController alloc] init];
+        passwordController.isSettingMode = NO;
+        passwordController.delegate = self;
+        self.window.rootViewController = passwordController;
+    } else {
+        UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+        self.window.rootViewController = navigation;
+        navigation.navigationBar.translucent = NO;
+    }
+    
     return YES;
 }
 
@@ -42,7 +54,16 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    if ([DWSettingStore sharedInstance].isLocked) {
+        DWPasswordViewController *passwordController = [[DWPasswordViewController alloc] init];
+        passwordController.isSettingMode = NO;
+        passwordController.delegate = self;
+        self.window.rootViewController = passwordController;
+    } else {
+        UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+        self.window.rootViewController = navigation;
+        navigation.navigationBar.translucent = NO;
+    }
 }
 
 
@@ -129,6 +150,31 @@
             abort();
         }
     }
+}
+
+#pragma mark - private
+- (void)loadUserInfoFromDataBase {
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSError *error;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"UserInfo"];
+    
+    NSArray *objects = [context executeFetchRequest:request error:&error];
+    
+    NSManagedObject *theUserInfo = nil;
+    if ([objects count] > 0) {
+        theUserInfo = [objects objectAtIndex:0];
+        [DWSettingStore sharedInstance].isLocked = ((NSNumber *)[theUserInfo valueForKey:@"isLocked"]).integerValue;
+    } else {
+        [DWSettingStore sharedInstance].isLocked = NO;
+    }
+}
+
+#pragma mark - DWPasswordViewControllerDelegate
+- (void)enterApp {
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+    self.window.rootViewController = navigation;
+    navigation.navigationBar.translucent = NO;
 }
 
 @end
