@@ -10,6 +10,7 @@
 #import "DWPasswordNumberButton.h"
 #import "DWPasswordDisplayView.h"
 #import "DWPasswordChecker.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 #import "Constants.h"
 
 @interface DWPasswordViewController ()
@@ -21,6 +22,8 @@
 
 @property (strong, nonatomic) DWPasswordChecker *checker;
 @property (copy, nonatomic) NSMutableString *password;
+
+@property (strong, nonatomic) LAContext *laContext;
 
 @end
 
@@ -39,6 +42,21 @@
     [self.view addSubview:self.buttonBackspace];
     if (self.isSettingMode) {
         [self.view addSubview:self.buttonQuit];
+    } else {
+        NSError *error;
+        if ([self.laContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+            [self.laContext evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"使用指纹解锁" reply:^(BOOL success, NSError * _Nullable error) {
+                // 加入主线程，否则会卡几秒
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (success) {
+                        [self.delegate enterApp];
+                    }
+                    if (error) {
+                        NSLog(@"%@", error.description);
+                    }
+                });
+            }];
+        }
     }
 }
 
@@ -102,6 +120,13 @@
         _password = [[NSMutableString alloc] initWithCapacity:4];
     }
     return _password;
+}
+
+- (LAContext *)laContext {
+    if (!_laContext) {
+        _laContext = [[LAContext alloc] init];
+    }
+    return _laContext;
 }
 
 #pragma mark - handle tap gesture

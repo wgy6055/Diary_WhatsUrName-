@@ -51,9 +51,6 @@ typedef enum : NSUInteger {
 @end
 
 @implementation ViewController {
-    CGFloat _startContentOffsetX;
-    CGFloat _willEndContentOffsetX;
-    CGFloat _endContentOffsetX;
 }
 
 + (NSArray *)arrayMonth
@@ -264,6 +261,7 @@ typedef enum : NSUInteger {
                 rect.size.height = self.view.bounds.size.height - CGRectGetMaxY(_scrollView.frame);
                 _tableView.frame = rect;
                 [self.view addSubview:_scrollView];
+                [self updateTableViewDataSourceFromDataBase];
             } else if (_controllerMode == CONTROLLER_MODE_CALENDAR) {
                 break;
             } else if (_controllerMode == CONTROLLER_MODE_TYPING) {
@@ -277,7 +275,6 @@ typedef enum : NSUInteger {
                 [self.view addSubview:_tableView];
             }
             _controllerMode = CONTROLLER_MODE_CALENDAR;
-            [self updateTableViewDataSourceFromDataBase];
             [self updateArrayModelDayWithDicDate:_scrollView.arrayDayDics[_scrollView.currentIndex]];
             [_tableView reloadData];
             break;
@@ -306,14 +303,6 @@ typedef enum : NSUInteger {
 }
 
 #pragma mark - UIScrollViewDelegate
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    _startContentOffsetX = scrollView.contentOffset.x;
-}
-
-- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
-    _willEndContentOffsetX = scrollView.contentOffset.x;
-}
-
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self scrollViewDidStop:scrollView];
 }
@@ -508,7 +497,8 @@ typedef enum : NSUInteger {
 }
 
 - (void)saveModelIntoDataBaseWithTitle:(NSString *)title detail:(NSString *)detail emotion:(NSString *)emotion weather:(NSString *)weather dicDate:(NSDictionary *)dicDate {
-    dispatch_async(dispatch_get_main_queue(), ^{
+    dispatch_group_t dispatchGroup = dispatch_group_create();
+    dispatch_group_async(dispatchGroup, dispatch_get_main_queue(), ^{
         NSString *year = dicDate[@"year"];
         NSString *month = dicDate[@"month"];
         NSString *day = dicDate[@"day"];
@@ -557,6 +547,9 @@ typedef enum : NSUInteger {
         
         [delegate saveContext];
     });
+    dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^{
+        [self updateTableViewDataSourceFromDataBase];
+    });
 }
 
 - (void)deleteDiaryModelInDateBaseWithDicDate:(NSDictionary *)dicDate {
@@ -588,9 +581,6 @@ typedef enum : NSUInteger {
 
 #pragma mark - handle tap gesture
 - (void)buttonSettingTap {
-//    DWPasswordViewController *controller = [[DWPasswordViewController alloc] init];
-//    controller.delegate = self;
-//    [self.navigationController presentViewController:controller animated:YES completion:nil];
     DWSettingViewController *controller = [[DWSettingViewController alloc] init];
     controller.delegate = self;
     [self.navigationController presentViewController:controller animated:YES completion:nil];
