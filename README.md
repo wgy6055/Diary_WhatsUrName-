@@ -8,3 +8,6 @@
 ## 2017.4.8更新
 ### 新增密码锁功能，Touch ID 功能马上就到~<br>
 ![](https://github.com/wgy6055/Diary_WhatsUrName-/raw/master/gif/IMG_2675.PNG)![](https://github.com/wgy6055/Diary_WhatsUrName-/raw/master/gif/IMG_2676.PNG)
+## 20174.9更新
+### 新增Touch ID功能
+![](https://github.com/wgy6055/Diary_WhatsUrName-/raw/master/gif/IMG_2678.PNG)
